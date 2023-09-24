@@ -57,7 +57,7 @@ const config: HardhatUserConfig = {
         // Same as ganache-cli -d
         {
           balance: '100000000000000000000',
-          privateKey: '0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d'
+          privateKey: '0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d'
         },
         {
           balance: '100000000000000000000',

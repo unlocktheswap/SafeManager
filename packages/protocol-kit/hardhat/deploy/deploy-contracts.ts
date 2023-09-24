@@ -85,12 +85,16 @@ const deploy: DeployFunction = async (hre: HardhatRuntimeEnvironment): Promise<v
   const { deployer } = await getNamedAccounts()
   const { deploy } = deployments
 
+  console.log('deployer: ' + deployer)
+
   await deploy(safeDeployed.name, {
     from: deployer,
     args: [],
     log: true,
-    deterministicDeployment: true
+    deterministicDeployment: false
   })
+
+  console.log('we made it?')
 
   await deploy(proxyFactoryDeployed.name, {
     from: deployer,
