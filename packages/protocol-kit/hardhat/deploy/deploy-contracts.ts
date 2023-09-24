@@ -87,7 +87,7 @@ const deploy: DeployFunction = async (hre: HardhatRuntimeEnvironment): Promise<v
 
   console.log('deployer: ' + deployer)
 
-  await deploy(safeDeployed.name, {
+  const thing = await deploy(safeDeployed.name, {
     from: deployer,
     args: [],
     log: true,
@@ -192,6 +192,8 @@ const deploy: DeployFunction = async (hre: HardhatRuntimeEnvironment): Promise<v
     log: true,
     deterministicDeployment: true
   })
+
+  console.log(thing.address)
 }
 
 export default deploy
